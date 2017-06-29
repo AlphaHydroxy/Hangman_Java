@@ -1,10 +1,14 @@
 package example.codeclan.com.hangman;
 
+import java.util.Scanner;
+
 /**
  * Created by user on 28/06/2017.
  */
 
 public class HangmanLogic {
+
+    private Scanner sc;
 
     public void playGame(AnswerWord answer, LetterPicker letterplayer) {
 
@@ -25,6 +29,9 @@ public class HangmanLogic {
             System.out.println("You won!");
             System.out.println("The correct answer was:");
             System.out.println(answer.getAnswer());
+            System.out.println("Would you like to play another game? (yes/no)");
+            String input = sc.nextLine().toLowerCase();
+            input = sc.nextLine();
             System.exit(0);
         }
 
